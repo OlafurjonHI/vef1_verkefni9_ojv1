@@ -1,5 +1,5 @@
 // const API_URL = '/example.json?domain=';
-const API_URL = 'http://apis.is/isnic?domain=';
+const API_URL = 'https://apis.is/isnic?domain=';
 const domains = document.querySelector('.domains');
 /**
  * Leit að lénum á Íslandi gegnum apis.is
@@ -76,9 +76,8 @@ const program = (() => {
       .then((data) => {
         displayResults(data.results);
       })
-      .catch((error) => {
+      .catch((error) => {/* eslint-disable-line */
         displayErrorMessage('Villa við að sækja gögn');
-        error.log(error);
       });
   }
 
